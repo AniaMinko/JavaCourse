@@ -2,19 +2,19 @@ package model;
 
 public class AssemblyLine implements IAssemblyLine{
 	
-	ILineStep body;
-	ILineStep engine;
-	ILineStep tower;
+	ILineStep buildingBody;
+	ILineStep buildingEngine;
+	ILineStep buildingTower;
 	
-	public AssemblyLine(BodyLineStep body, EngineLineStep engine, TowerLineStep tower){
-		this.body=body;
-		this.engine=engine;
-		this.tower = tower;
+	public AssemblyLine(BodyLineStep buildingBody, EngineLineStep buildingEngine, TowerLineStep buildingTower){
+		this.buildingBody=buildingBody;
+		this.buildingEngine=buildingEngine;
+		this.buildingTower=buildingTower;
 	}
 	public IProduct assembleProduct(IProduct product){
-		product.installFirstPart(body.buildProductPart());
-		product.installSecondPart(engine.buildProductPart());
-		product.installThirdPart(tower.buildProductPart());
+		product.installFirstPart(buildingBody.buildProductPart());
+		product.installSecondPart(buildingEngine.buildProductPart());
+		product.installThirdPart(buildingTower.buildProductPart());
 		System.out.println("The product is ready");
 		return product;
 	}

@@ -1,15 +1,7 @@
 package model;
 
 public class Body implements IProductPart {
-	/*private String body;
-	
-	public void setBody(String body){
-		this.body=body;
+	public Body() {
+		System.out.println("Create body");
 	}
-	public String getBody(){
-		return body;
-	}
-  public Body(String body){
-	  this.body=body;
-  }*/
 }
