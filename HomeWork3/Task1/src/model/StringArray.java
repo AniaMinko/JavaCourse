@@ -1,6 +1,6 @@
 package model;
 
-//import java.lang.reflect.Array;
+
 
 public class StringArray {
 	
@@ -10,22 +10,43 @@ public class StringArray {
 	    array = new String[]{"Mother","Father", "Brother","java","Action","paper","action"};
 	}
 	
-	public void sortArray(){
-          for(int i=0; i<array.length;i++){
-        	  for(int j=i+1;j<array.length; j++ ){
-        		  if(array[j].compareTo(array[i])<0){
+	private String[] sortArray1(String[] arr){
+          for(int i=0; i<arr.length;i++){
+        	  for(int j=i+1;j<arr.length; j++ ){
+        		  if(arr[j].compareTo(arr[i])<0){
         			  String temp = array[j];
-        			  array[j]=array[i];
-        			  array[i]=temp;
+        			  arr[j]=arr[i];
+        			  arr[i]=temp;
         		  }
         	  }
           }
-          printArray();
+          return arr;
 	}
-	
+	private String[] sortArray2(String[] arr){
+		for(int i=0; i<arr.length;i++){
+      	  for(int j=i+1;j<arr.length; j++ ){
+      		  if(arr[j].compareTo(arr[i])>0){
+      			  String temp = arr[j];
+      			  arr[j]=arr[i];
+      			  arr[i]=temp;
+      		  }
+      	  }
+        }
+        return arr;
+	}
 	public void printArray(){
-		for(int i=0; i<array.length;i++){
-			System.out.print(array[i]+" ");
+	for(int i=0; i<array.length;i++){
+		System.out.println(array[i]+" ");
+	}
+}
+	public void getSortArray(boolean value){
+		if(value){
+			System.out.println("alphabetically sorted array: " );
+			sortArray1(array);
+		}
+		else{
+			System.out.println("not alphabetically sorted array: ");
+			sortArray2(array);
 		}
 	}
 
