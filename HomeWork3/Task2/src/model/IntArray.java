@@ -3,17 +3,18 @@ package model;
 public class IntArray {
 
 	private int[] array;
-	private int length;
+	private final int length;
 
 	public IntArray() {
 		length=3;
 		array = new int[length];
 	}
 
-	public void writeArray() {
-		for (int i = 0; i < length; i++) {
-			array[i] = (new java.util.Random()).nextInt(999)%900+100;
+	private int[] writeArray(int[] arr) {
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = (new java.util.Random()).nextInt(999)%900+100;
 		}
+		return arr;
 	}
 
 	public void printArray() {
@@ -21,12 +22,20 @@ public class IntArray {
 				System.out.println(array[i] + " ");
 		}
 	}
-	public void getSum(){
+	private int getSum(int[] arr){
 		int sum=0;
-		for(int i=0; i<length; i++){
-			array[i]=(array[i]-(array[i]%100))/100;
-			sum+=array[i];
+		for(int i=0; i<arr.length; i++){
+			arr[i]=(arr[i]-(arr[i]%100))/100;
+			sum+=arr[i];
 		}
-		System.out.print(sum);
+		return sum;
+	}
+	public void getResult(int value){
+		if(value==1){
+			writeArray(array);
+		}
+		else if(value==2){
+			System.out.println("sum of firsts numbers: " + getSum(array));
+		}
 	}
 }
