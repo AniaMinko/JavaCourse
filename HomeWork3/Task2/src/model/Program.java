@@ -4,12 +4,12 @@ public class Program {
 
 	public static void main(String[] args) {
 		
-		IntArray array1= new IntArray();
-		array1.writeArray();
+		IntArray array= new IntArray();
 		System.out.println("randomly-filled array: ");
-		array1.printArray();
-		System.out.println("sum of first numbers: ");
-		array1.getSum();
+		array.getResult(1);
+		array.printArray();
+		array.getResult(2);
+		
 
 	}
 
