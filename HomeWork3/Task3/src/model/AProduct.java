@@ -21,7 +21,7 @@ public abstract class AProduct  {
 	public double getWeigth(){
 		return weigth;
 	}
-	public abstract AProduct getProduct();
+	
 	
 	
 	
