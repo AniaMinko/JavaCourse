@@ -6,8 +6,5 @@ public class Beverage extends AProduct{
 		super(name,weigth);
 	}
 	
-	@Override
-    public AProduct getProduct(){
-	   return new Beverage(getName(),getWeigth());
-   }
+	
 }
