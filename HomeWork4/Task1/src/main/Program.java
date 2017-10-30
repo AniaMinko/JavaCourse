@@ -1,5 +1,4 @@
 package main;
-
 import entity.Book;
 import repositories.BookRepository;
 import repositories.OrderRepository;
@@ -16,13 +15,12 @@ import entity.Request;
 public class Program {
 
 	public static void main(String[] args) {
-
 		Client client1 = new Client("Anna", "ann7856@hdbs.ru");
 		Client client2 = new Client("Sasha", "sasha20@gl.com");
 		Client client3 = new Client("Pasha", "pashka6@lg.com");
-		Book[] books = { new Book("It", "Stephen King", 120.0, 1216, StatusOfBook.YES),
-				new Book("The Da Vinci Code", "Dan Draun", 75.5, 1369, StatusOfBook.YES),
-				new Book("Journey to the center of the earth", "Jules Verne", 48.8, 1963, StatusOfBook.NO) };
+		Book[] books = { new Book(101,"It", "Stephen King", 120.0,  StatusOfBook.YES),
+				new Book(102,"The Da Vinci Code", "Dan Draun", 75.5, StatusOfBook.YES),
+				new Book(103,"Journey to the center of the earth", "Jules Verne", 48.8, StatusOfBook.NO) };
 
 		Order[] orders = { new Order(140.5, 1785, client1, StatusOfOrder.DURING),
 				new Order(120.4, 1396, client2, StatusOfOrder.MADE),
@@ -62,11 +60,11 @@ public class Program {
 		Printer.print("Info about order: ");
 		bookShop.printInfoOfOrder(1785);
 
-		bookShop.addBookToStock(new Book("Anna Karenina","Lev Tolstoy",85.5,3000,StatusOfBook.YES));
+		bookShop.addBookToStock(new Book(104,"Anna Karenina","Lev Tolstoy",85.5,StatusOfBook.YES));
 		bookShop.writeOffBookFromStock(books[1]);
 		
 		bookShop.addOrder(new Order(130.2,2000,new Client("Dasha","dashka74@gfl.com"),StatusOfOrder.DURING));
-		bookShop.makeOrder(new Book("Anna Karenina","Lev Tolstoy",85.5,3000,StatusOfBook.YES), 7856);
+		bookShop.makeOrder(new Book(104,"Anna Karenina","Lev Tolstoy",85.5,StatusOfBook.YES), 7856);
 		bookShop.cancelOrder(orders[0]);
 	}
 
