@@ -22,8 +22,5 @@ public class RequestService {
 		return repository.getRequestsForBook(book);
 	}
 
-	/*public Request[] sortRequestsforBook(){
-		Arrays.sort(repository.getRequestsForBook(),new SortingMadeOrdersByPrice());
-		return repository.getOrders();
-	}*/
+	
 }

@@ -11,15 +11,9 @@ public class BookShop {
 	private OrderService orderService;
 	private RequestService requestService;
 
-	public BookShop(BookService bookService) {
+	public BookShop(BookService bookService,OrderService orderService,RequestService requestService) {
 		this.bookService = bookService;
-	}
-
-	public BookShop(OrderService orderService) {
 		this.orderService = orderService;
-	}
-
-	public BookShop(RequestService requestService) {
 		this.requestService = requestService;
 	}
 
@@ -45,13 +39,7 @@ public class BookShop {
 		}
 	}
 
-	/*
-	 * public void getListOfRequests() { for (int i = 0; i <
-	 * requestService.getRepository().getRequests().length; i++) { if
-	 * (requestService.getRepository().getRequests()[i] != null) {
-	 * Printer.print(requestService.getRepository().getRequests()[i].toString())
-	 * ; } } }
-	 */
+
 
 	public void getListOfMadeOrders() {
 		Printer.print("list of made orders");

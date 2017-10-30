@@ -2,13 +2,13 @@ package entity;
 
 public class Request extends Entity {
 
-	private int quantity; // кол-во запросов
+	private int quantity; 
 	private Client client;
 	private Book book;
 
-	public Request(int quantity, int id, Book book) {
+	public Request(int quantity,int id, Book book) {
 		super(id);
-		this.quantity = quantity;
+		this.quantity=quantity;
 		this.book=book;
 	}
 

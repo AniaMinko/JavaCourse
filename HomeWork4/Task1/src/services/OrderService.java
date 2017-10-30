@@ -11,8 +11,9 @@ import entity.Book;
 public class OrderService {
 
 	private OrderRepository repository;
-	public OrderService(OrderRepository repository){
-		this.repository=repository;
+
+	public OrderService(OrderRepository repository) {
+		this.repository = repository;
 	}
 
 	public OrderRepository getRepository() {
@@ -39,13 +40,12 @@ public class OrderService {
 		return repository.getOrders();
 	}
 
-	public Order[] sortMadeOrdersByDate() { /// вопрос правильно ли сделан
-											/// массив выполненных заказов
+	public Order[] sortMadeOrdersByDate() {
 		Arrays.sort(repository.getMadeOrders(), new SortingMadeOrdersByDate());
 		return repository.getMadeOrders();
 	}
 
-	public int getQuantityMadeOrders() { /// количество выполненых заказов
+	public int getQuantityMadeOrders() {
 		int temp = 0;
 		for (int i = 0; i < repository.getOrders().length; i++) {
 			if (repository.getOrders()[i] != null && repository.getOrders()[i].checkMadeOrder()) {
@@ -67,10 +67,10 @@ public class OrderService {
 
 	public void makeOrder(Book book, int idOfOrder) {
 		if (Checker.checkEmptyCells(repository.getOrder(idOfOrder).getBooks())) {
-          int position = Checker.getPosition(repository.getOrder(idOfOrder).getBooks());
-          repository.getOrder(idOfOrder).getBooks()[position]=book;
-          repository.getOrder(idOfOrder).setStatus(StatusOfOrder.DURING);
+			int position = Checker.getPosition(repository.getOrder(idOfOrder).getBooks());
+			repository.getOrder(idOfOrder).getBooks()[position] = book;
+			repository.getOrder(idOfOrder).setStatus(StatusOfOrder.DURING);
 		}
 	}
-	
+
 }

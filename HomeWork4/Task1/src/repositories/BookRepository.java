@@ -35,7 +35,6 @@ public class BookRepository {
 	public void removeBook(Book book) {
 		for (int i = 0; i < books.length; i++) {
 			if (books[i] != null && books[i].getName().equals((String) book.getName())) {
-				books[i] = null;
 				books[i].setStatus(StatusOfBook.NO);
 			}
 		}

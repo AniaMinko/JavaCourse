@@ -25,9 +25,9 @@ public class OrderRepository {
 	}
 
 	public void addOrder(Order order) {
-		if (Checker.checkEmptyCells(orders)) {
-			int position = Checker.getPosition(orders);
-			orders[position] = order;
+		if (Checker.checkEmptyCells(getOrders())) {
+			int position = Checker.getPosition(getOrders());
+			getOrders()[position] = order;
 			//order.setStatus(StatusOfOrder.DURING);
 		}
 	}
