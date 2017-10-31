@@ -6,7 +6,7 @@ import services.RequestService;
 import entity.Order;
 import entity.Book;
 
-public class BookShop {
+public class BookShop implements IBookShop{
 	private BookService bookService;
 	private OrderService orderService;
 	private RequestService requestService;
