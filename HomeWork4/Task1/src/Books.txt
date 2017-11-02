@@ -1,5 +1,0 @@
-1100 Journey to the center of the world Jules Verne 75.5 15/2/2016 NO
-1002 It Steven King 90.6 22/2/2017 YES
-1333 Blown away by the wind Margaret Mitchell 130.2 22/10/2015 NO
-1360 War and Peace Lev Tolstoy 100.0 1/4/2016 NO
-1520 Anna Karenina Lev Tolstoy 103.2 30/10/2017 NO
