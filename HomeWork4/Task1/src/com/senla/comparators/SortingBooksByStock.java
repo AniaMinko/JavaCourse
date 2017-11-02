@@ -3,7 +3,7 @@ package com.senla.comparators;
 import java.util.Comparator;
 
 import com.senla.entity.Book;
-import com.senla.entity.StatusOfBook;
+import com.senla.enums.StatusOfBook;
 
 public class SortingBooksByStock implements Comparator<Book> {
 

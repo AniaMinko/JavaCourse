@@ -1,7 +1,7 @@
 package com.senla.repositories;
 
 import com.senla.entity.Order;
-import com.senla.entity.StatusOfOrder;
+import com.senla.enums.StatusOfOrder;
 import com.senla.utils.Checker;
 //import entity.Book;
 public class OrderRepository {

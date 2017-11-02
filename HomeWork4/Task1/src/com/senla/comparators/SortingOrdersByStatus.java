@@ -3,7 +3,7 @@ package com.senla.comparators;
 import java.util.Comparator;
 
 import com.senla.entity.Order;
-import com.senla.entity.StatusOfOrder;;
+import com.senla.enums.StatusOfOrder;;
 
 public class SortingOrdersByStatus implements Comparator<Order> {
 

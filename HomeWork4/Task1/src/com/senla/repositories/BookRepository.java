@@ -1,6 +1,6 @@
 package com.senla.repositories;
 import com.senla.entity.Book;
-import com.senla.entity.StatusOfBook;
+import com.senla.enums.StatusOfBook;
 import com.senla.utils.Checker;
 public class BookRepository {
 	private Book[] books;

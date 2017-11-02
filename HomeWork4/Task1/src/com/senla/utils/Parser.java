@@ -3,6 +3,8 @@ package com.senla.utils;
 import java.util.GregorianCalendar;
 
 import com.senla.entity.*;
+import com.senla.enums.StatusOfBook;
+import com.senla.enums.StatusOfOrder;
 
 public class Parser {
 

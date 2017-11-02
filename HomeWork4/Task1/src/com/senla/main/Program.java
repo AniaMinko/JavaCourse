@@ -5,8 +5,9 @@ import java.util.GregorianCalendar;
 import com.senla.entity.Book;
 import com.senla.entity.Client;
 import com.senla.entity.Order;
-import com.senla.entity.StatusOfBook;
-import com.senla.entity.StatusOfOrder;
+import com.senla.enums.StatusOfBook;
+import com.senla.enums.StatusOfOrder;
+import com.senla.facade.BookShop;
 import com.senla.utils.FileWorker;
 
 public class Program {
