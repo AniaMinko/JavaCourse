@@ -1,0 +1,3 @@
+101 Anna 1111 1100 Journey to the center of the world Jules Verne 75.5 15/2/2016 YES DURING 1 4 2016 75.5
+102 Sasha 1122 1333 Blown away by the wind Margaret Mitchell 130.2 22/10/2015 YES MADE 22 2 2017 130.2
+103 Kirill 1133 1002 It Steven King 90.6 22/2/2017 YES MADE 30 10 2017 90.6
