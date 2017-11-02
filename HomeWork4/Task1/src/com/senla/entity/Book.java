@@ -3,6 +3,8 @@ package com.senla.entity;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
+import com.senla.enums.StatusOfBook;
+
 //import java.util.Date;
 public class Book extends Entity {
 	private String name;

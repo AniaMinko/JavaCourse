@@ -6,7 +6,7 @@ import com.senla.comparators.SortingOrdersByDate;
 import com.senla.comparators.SortingOrdersByPrice;
 import com.senla.comparators.SortingOrdersByStatus;
 import com.senla.entity.Order;
-import com.senla.entity.StatusOfOrder;
+import com.senla.enums.StatusOfOrder;
 import com.senla.repositories.OrderRepository;
 
 public class OrderService {
